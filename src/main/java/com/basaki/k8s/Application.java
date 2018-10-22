@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * {@code ServerApplication} represents the entry point for the Spring
- * boot application example on server tier.
+ * {@code Application} represents the entry point for the Spring
+ * boot application example.
  * <p/>
  *
  * @author Indra Basak
- * @since 12/27/17
+ * @since 10/20/18
  */
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.basaki.k8s"})

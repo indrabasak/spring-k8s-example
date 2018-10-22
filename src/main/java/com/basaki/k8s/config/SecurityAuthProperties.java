@@ -37,7 +37,7 @@ import org.springframework.http.HttpMethod;
  * </pre>
  *
  * @author Indra Basak
- * @since 02/24/18
+ * @since 10/20/18
  */
 @ConfigurationProperties("security.auth")
 @Getter

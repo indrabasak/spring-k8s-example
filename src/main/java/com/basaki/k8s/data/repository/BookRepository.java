@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * <p/>
  *
  * @author Indra Basak
- * @since 11/23/17
+ * @since 10/20/18
  */
 @Repository
 public interface BookRepository extends JpaRepository<Book, UUID> {

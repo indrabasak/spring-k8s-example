@@ -6,7 +6,7 @@ package com.basaki.k8s.error.exception;
  * <p/>
  *
  * @author Indra Basak
- * @since 12/28/16
+ * @since 10/20/18
  */
 public class SecurityConfigurationException extends RuntimeException {
 

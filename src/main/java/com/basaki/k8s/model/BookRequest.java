@@ -9,7 +9,7 @@ import lombok.Getter;
  * <p/>
  *
  * @author Indra Basak
- * @since 12/7/17
+ * @since 10/20/18
  */
 @Getter
 public class BookRequest {

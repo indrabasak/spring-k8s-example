@@ -9,7 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * <p/>
  *
  * @author Indra Basak
- * @since 02/28/18
+ * @since 10/20/18
  */
 public class GenerateEncodedPassword {
 

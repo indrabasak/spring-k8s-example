@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * <p/>
  *
  * @author Indra Basak
- * @since 11/23/17
+ * @since 10/20/18
  */
 @Configuration
 @EnableJpaRepositories(basePackages = {"com.basaki.k8s.data.repository"})
