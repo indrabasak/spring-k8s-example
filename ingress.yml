@@ -1,8 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: spring-k8s-example-ingress
+  name: spring-example-ingress
 spec:
   backend:
-    serviceName: spring-k8s-example-service
+    serviceName: spring-example-service
     servicePort: 8080

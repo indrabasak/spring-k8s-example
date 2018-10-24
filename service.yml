@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-k8s-example-service
+  name: spring-example-service
 spec:
   ports:
   - port: 8080
@@ -13,5 +13,5 @@ spec:
     nodePort: 30081
     name: management
   selector:
-    app: spring-k8s-example-app
+    app: spring-example-app
   type: NodePort

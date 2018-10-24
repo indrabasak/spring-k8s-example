@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-k8s-example-deployment
+  name: spring-example-deployment
 spec:
   selector:
     matchLabels:
-      app: spring-k8s-example-app
+      app: spring-example-app
   replicas: 3
   template:
     metadata:
       labels:
-        app: spring-k8s-example-app
+        app: spring-example-app
     spec:
       containers:
-      - name: spring-k8s-example-app
+      - name: spring-example-app
         image: basaki/spring-k8s-example:1.0.0
         ports:
         - containerPort: 8080

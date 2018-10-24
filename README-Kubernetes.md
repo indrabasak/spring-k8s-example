@@ -502,3 +502,64 @@ NAME                  ENDPOINTS                                                 
 kubernetes            192.168.65.3:6443                                          1d
 spring-boot-service   10.1.0.11:8081,10.1.0.12:8081,10.1.0.13:8081 + 3 more...   21h
 ```
+
+## Delete Ingress
+```
+$ kubectl get ingress
+NAME                  HOSTS     ADDRESS   PORTS     AGE
+spring-boot-ingress   *                   80        2d
+ibasa-mb-57485:spring-k8s-example indra.basak$ kubectl delete ingress spring-boot-ingress
+ingress.extensions "spring-boot-ingress" deleted
+ibasa-mb-57485:spring-k8s-example indra.basak$ kubectl get ingress
+No resources found.
+```
+
+## Delete Service
+```
+$ kubectl get service
+NAME                  TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+kubernetes            ClusterIP   10.96.0.1       <none>        443/TCP                         4d
+spring-boot-service   NodePort    10.108.46.191   <none>        8080:30080/TCP,8081:30081/TCP   3d
+ibasa-mb-57485:spring-k8s-example indra.basak$ kubectl delete service spring-boot-service
+service "spring-boot-service" deleted
+ibasa-mb-57485:spring-k8s-example indra.basak$ kubectl get service
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   4d
+```
+
+## Delete Deployment
+```
+$ kubectl get pods
+NAME                                      READY     STATUS    RESTARTS   AGE
+spring-boot-deployment-59b7cbf74f-5tm9x   1/1       Running   0          3d
+spring-boot-deployment-59b7cbf74f-7rdkr   1/1       Running   0          3d
+spring-boot-deployment-59b7cbf74f-8x6wd   1/1       Running   0          3d
+
+$ kubectl get nodes
+NAME                 STATUS    ROLES     AGE       VERSION
+docker-for-desktop   Ready     master    4d        v1.10.3
+
+$ kubectl get deployments
+NAME                     DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+spring-boot-deployment   3         3         3            3           3d
+
+$ kubectl delete deployments spring-boot-deployment
+deployment.extensions "spring-boot-deployment" deleted
+
+$ kubectl get deployments
+No resources found.
+
+$ kubectl get nodes
+NAME                 STATUS    ROLES     AGE       VERSION
+docker-for-desktop   Ready     master    4d        v1.10.3
+
+$ kubectl get pods
+No resources found.
+
+```
+
+### Create Deployment
+```bash
+$ kubectl create -f deployment.yml 
+deployment.apps "spring-example-deployment" created
+```
